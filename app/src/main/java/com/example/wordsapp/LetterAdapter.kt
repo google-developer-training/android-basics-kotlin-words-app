@@ -69,8 +69,7 @@ class LetterAdapter :
         holder.button.setOnClickListener {
             // Create an action from WordList to DetailList
             // using the required arguments
-            val action = WordListFragmentDirections
-                .actionWordListToDetailList(letter = holder.button.text.toString())
+            val action = LetterListFragmentDirections.actionLetterListFragmentToWordListFragment(letter = holder.button.text.toString())
             // Navigate using that action
             holder.view.findNavController().navigate(action)
         }
