@@ -16,7 +16,12 @@
 package com.example.wordsapp
 
 import android.os.Bundle
-import android.view.*
+import android.view.LayoutInflater
+import android.view.Menu
+import android.view.MenuInflater
+import android.view.MenuItem
+import android.view.ViewGroup
+import android.view.View
 import androidx.core.content.ContextCompat
 import androidx.fragment.app.Fragment
 import androidx.recyclerview.widget.GridLayoutManager
@@ -44,7 +49,8 @@ class LetterListFragment : Fragment() {
     }
 
     override fun onCreateView(
-        inflater: LayoutInflater, container: ViewGroup?,
+        inflater: LayoutInflater,
+        container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
         // Retrieve and inflate the layout for this fragment
@@ -88,9 +94,11 @@ class LetterListFragment : Fragment() {
         //     menu.icon = ContextCompat.getDrawable(context, R.drawable.ic_grid_layout)
         // else menu.icon = ContextCompat.getDrawable(context, R.drawable.ic_linear_layout)
         menuItem.icon =
-            if (isLinearLayoutManager)
+            if (isLinearLayoutManager) {
                 ContextCompat.getDrawable(this.requireContext(), R.drawable.ic_grid_layout)
-            else ContextCompat.getDrawable(this.requireContext(), R.drawable.ic_linear_layout)
+            } else {
+                ContextCompat.getDrawable(this.requireContext(), R.drawable.ic_linear_layout)
+            }
     }
 
     /**
@@ -121,11 +129,11 @@ class LetterListFragment : Fragment() {
 
                 return true
             }
-            //  Otherwise, do nothing and use the core event handling
+            // Otherwise, do nothing and use the core event handling
 
             // when clauses require that all possible paths be accounted for explicitly,
-            //  for instance both the true and false cases if the value is a Boolean,
-            //  or an else to catch all unhandled cases.
+            // for instance both the true and false cases if the value is a Boolean,
+            // or an else to catch all unhandled cases.
             else -> super.onOptionsItemSelected(item)
         }
     }
