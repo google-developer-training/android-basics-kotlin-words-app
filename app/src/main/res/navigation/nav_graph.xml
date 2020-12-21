@@ -1,4 +1,5 @@
-<?xml version="1.0" encoding="utf-8"?><!--
+<?xml version="1.0" encoding="utf-8"?>
+<!--
      Copyright (C) 2020 The Android Open Source Project
 
      Licensed under the Apache License, Version 2.0 (the "License");
@@ -18,11 +19,11 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/nav_graph"
     app:startDestination="@id/letterListFragment">
+
     <fragment
         android:id="@+id/letterListFragment"
         android:name="com.example.wordsapp.LetterListFragment"
-        android:label="@string/app_name"
-        tools:layout="@layout/fragment_letter_list">
+        android:label="@string/app_name">
         <action
             android:id="@+id/action_letterListFragment_to_wordListFragment"
             app:destination="@id/wordListFragment" />
@@ -30,7 +31,7 @@
     <fragment
         android:id="@+id/wordListFragment"
         android:name="com.example.wordsapp.WordListFragment"
-        android:label="@string/fragment_label"
+        android:label="@string/word_list_fragment_label"
         tools:layout="@layout/fragment_word_list">
         <argument
             android:name="letter"

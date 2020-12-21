@@ -28,14 +28,6 @@ import com.example.wordsapp.databinding.FragmentWordListBinding
  * Displays a [RecyclerView] of words with search buttons to look them up.
  */
 class WordListFragment : Fragment() {
-    private lateinit var letterId: String
-
-    private var _binding: FragmentWordListBinding? = null
-
-    // This property is only valid between onCreateView and
-    // onDestroyView.
-    private val binding get() = _binding!!
-
 
     /**
      * Provides global access to these variables from anywhere in the app
@@ -46,6 +38,14 @@ class WordListFragment : Fragment() {
         val LETTER = "letter"
         val SEARCH_PREFIX = "https://www.google.com/search?q="
     }
+
+    private var _binding: FragmentWordListBinding? = null
+
+    // This property is only valid between onCreateView and
+    // onDestroyView.
+    private val binding get() = _binding!!
+
+    private lateinit var letterId: String
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -63,8 +63,7 @@ class WordListFragment : Fragment() {
     ): View? {
         // Retrieve and inflate the layout for this fragment
         _binding = FragmentWordListBinding.inflate(inflater, container, false)
-        val view = binding.root
-        return view
+        return binding.root
     }
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
