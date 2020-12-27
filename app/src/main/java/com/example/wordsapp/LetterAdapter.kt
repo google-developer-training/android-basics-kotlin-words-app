@@ -40,9 +40,7 @@ class LetterAdapter :
         val button = view.findViewById<Button>(R.id.button_item)
     }
 
-    override fun getItemCount(): Int {
-        return list.size
-    }
+    override fun getItemCount(): Int = list.size
 
     /**
      * Creates new views with R.layout.item_view as its template
@@ -60,7 +58,7 @@ class LetterAdapter :
      * Replaces the content of an existing view with new data
      */
     override fun onBindViewHolder(holder: LetterViewHolder, position: Int) {
-        val item = list.get(position)
+        val item = list[position]
         holder.button.text = item.toString()
     }
 
