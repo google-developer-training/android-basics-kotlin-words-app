@@ -53,7 +53,7 @@ class WordAdapter(private val letterId: String, context: Context) :
     }
 
     class WordViewHolder(val view: View) : RecyclerView.ViewHolder(view) {
-        val button = view.findViewById<Button>(R.id.button_item)
+        val button: Button = view.findViewById<Button>(R.id.button_item)
     }
 
     override fun getItemCount(): Int = filteredWords.size
@@ -91,6 +91,7 @@ class WordAdapter(private val letterId: String, context: Context) :
             context.startActivity(intent)
         }
     }
+
     // Setup custom accessibility delegate to set the text read with
     // an accessibility service
     companion object Accessibility : View.AccessibilityDelegate() {
