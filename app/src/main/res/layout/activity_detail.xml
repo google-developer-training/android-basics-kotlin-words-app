@@ -26,6 +26,6 @@
         android:layout_height="match_parent"
         android:clipToPadding="false"
         android:padding="16dp"
-        tools:listitem="@layout/word_item_view" />
+        tools:listitem="@layout/item_view" />
 
 </FrameLayout>
