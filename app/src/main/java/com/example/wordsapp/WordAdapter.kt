@@ -27,11 +27,13 @@ import android.widget.Button
 import androidx.annotation.RequiresApi
 import androidx.recyclerview.widget.RecyclerView
 
+private const val No_OF_WORDS = 5
 /**
  * Adapter for the [RecyclerView] in [DetailActivity].
  */
-class WordAdapter(private val letterId: String, context: Context) :
-    RecyclerView.Adapter<WordAdapter.WordViewHolder>() {
+class WordAdapter(
+    private val letterId: String, context: Context
+) : RecyclerView.Adapter<WordAdapter.WordViewHolder>() {
 
     private val filteredWords: List<String>
 
@@ -47,7 +49,7 @@ class WordAdapter(private val letterId: String, context: Context) :
             // Returns a collection that it has shuffled in place
             .shuffled()
             // Returns the first n items as a [List]
-            .take(5)
+            .take(No_OF_WORDS)
             // Returns a sorted version of that [List]
             .sorted()
     }
