@@ -28,7 +28,7 @@ import androidx.annotation.RequiresApi
 import androidx.recyclerview.widget.RecyclerView
 
 /**
- * Adapter for the [RecyclerView] in [DetailActivity].
+ * Adapter for the [RecyclerView] in [WordListFragment].
  */
 class WordAdapter(private val letterId: String, context: Context) :
     RecyclerView.Adapter<WordAdapter.WordViewHolder>() {
@@ -53,7 +53,7 @@ class WordAdapter(private val letterId: String, context: Context) :
     }
 
     class WordViewHolder(val view: View) : RecyclerView.ViewHolder(view) {
-        val button = view.findViewById<Button>(R.id.button_item)
+        val button: Button = view.findViewById(R.id.button_item)
     }
 
     override fun getItemCount(): Int = filteredWords.size
