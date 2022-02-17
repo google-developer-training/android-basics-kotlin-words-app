@@ -75,7 +75,6 @@ class LetterListFragment : Fragment() {
         // Initialize layoutDataStore
         layoutDataStore = SettingsDataStore(requireContext().dataStore)
 
-        layoutDataStore.preferenceFlow.asLiveData().observe(viewLifecycleOwner, {  })
         layoutDataStore.preferenceFlow.asLiveData().observe(viewLifecycleOwner, { value ->
                 isLinearLayoutManager = value
                 chooseLayout()
