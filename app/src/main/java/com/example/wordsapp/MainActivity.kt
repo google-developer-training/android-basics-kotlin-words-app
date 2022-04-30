@@ -16,6 +16,7 @@
 package com.example.wordsapp
 
 import android.os.Bundle
+import android.os.PersistableBundle
 import android.view.Menu
 import android.view.MenuItem
 import androidx.appcompat.app.AppCompatActivity
@@ -40,9 +41,7 @@ class MainActivity : AppCompatActivity() {
 
         recyclerView = binding.recyclerView
         // Sets the LinearLayoutManager of the recyclerview
-        recyclerView.layoutManager = LinearLayoutManager(this)
-        recyclerView.adapter = LetterAdapter()
-
+        chooseLayout()
     }
 
     private fun chooseLayout() {
