@@ -29,6 +29,7 @@ import com.example.wordsapp.databinding.ActivityMainBinding
 /**
  * Main Activity and entry point for the app. Displays a RecyclerView of letters.
  */
+
 class MainActivity : AppCompatActivity() {
     private lateinit var recyclerView: RecyclerView
     private var isLinearLayoutManager = true
