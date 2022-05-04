@@ -11,8 +11,8 @@ import com.example.wordsapp.databinding.FragmentLetterListBinding
 
 // TODO: Rename parameter arguments, choose names that match
 // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
-private const val ARG_PARAM1 = "param1"
-private const val ARG_PARAM2 = "param2"
+// private const val ARG_PARAM1 = "param1"
+// private const val ARG_PARAM2 = "param2"
 
 /**
  * A simple [Fragment] subclass.
@@ -28,6 +28,16 @@ class WordListFragment : Fragment() {
 
     private var _binding: FragmentLetterListBinding? = null
     private val binding get() = _binding!!
+
+    private lateinit var letterId: String
+
+    override fun onCreate(savedInstanceState: Bundle?) {
+        super.onCreate(savedInstanceState)
+
+        arguments?.let {
+            letterId = it.getString(LETTER).toString()
+        }
+    }
 
     override fun onCreateView(
         inflater: LayoutInflater,
