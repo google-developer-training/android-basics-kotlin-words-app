@@ -72,14 +72,13 @@ class LetterAdapter :
 
             // when a letter is pressed, this will
 
-
             val context = holder.view.context
             // Create an intent with a destination of DetailActivity
             val intent = Intent(context, DetailActivity::class.java)
             // Add the selected letter to the intent as extra data
             // The text of Buttons are [CharSequence], a list of characters,
             // so it must be explicitly converted into a [String].
-            intent.putExtra(DetailActivity.LETTER, holder.button.text.toString())
+            intent.putExtra(WordListFragment.LETTER, holder.button.text.toString())
             // Start an activity using the data and destination from the Intent.
             context.startActivity(intent)
         }

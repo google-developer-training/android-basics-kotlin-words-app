@@ -24,15 +24,8 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.Words">
-        <activity
-            android:name=".DetailActivity"
-            android:parentActivityName=".MainActivity" />
-<<<<<<< HEAD
         <activity android:name=".MainActivity"
             android:exported="true">
-=======
-        <activity android:name=".MainActivity">
->>>>>>> ee3fc3113323afc9bd4b22252aab337033d65f47
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
