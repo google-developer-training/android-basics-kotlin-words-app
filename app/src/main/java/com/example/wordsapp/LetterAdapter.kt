@@ -51,14 +51,11 @@ class LetterAdapter :
      */
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): LetterViewHolder {
         val layout = LayoutInflater
-<<<<<<< HEAD
+
                 .from(parent.context)
                 .inflate(R.layout.item_view, parent, false)
-=======
-            .from(parent.context)
-            .inflate(R.layout.item_view, parent, false)
-        
->>>>>>> ee3fc3113323afc9bd4b22252aab337033d65f47
+
+
         // Setup custom accessibility delegate to set the text read
         layout.accessibilityDelegate = Accessibility
         return LetterViewHolder(layout)
@@ -72,12 +69,10 @@ class LetterAdapter :
         holder.button.text = item.toString()
 
         holder.button.setOnClickListener {
-<<<<<<< HEAD
+
             // when a letter is pressed, this will
-            val context = holder.view.context
-            val intent = Intent(context, DetailActivity::class.java)
-            intent.putExtra(DetailActivity.LETTER, holder.button.text.toString())
-=======
+
+
             val context = holder.view.context
             // Create an intent with a destination of DetailActivity
             val intent = Intent(context, DetailActivity::class.java)
@@ -86,7 +81,6 @@ class LetterAdapter :
             // so it must be explicitly converted into a [String].
             intent.putExtra(DetailActivity.LETTER, holder.button.text.toString())
             // Start an activity using the data and destination from the Intent.
->>>>>>> ee3fc3113323afc9bd4b22252aab337033d65f47
             context.startActivity(intent)
         }
     }
