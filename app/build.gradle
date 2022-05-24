@@ -21,7 +21,6 @@ plugins {
 
 android {
     compileSdkVersion 30
-    buildToolsVersion "30.0.2"
 
     defaultConfig {
         applicationId "com.example.wordsapp"
@@ -51,6 +50,7 @@ android {
     buildFeatures {
         viewBinding = true
     }
+    namespace 'com.example.wordsapp'
 }
 
 dependencies {
