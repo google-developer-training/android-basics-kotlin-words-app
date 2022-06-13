@@ -19,7 +19,7 @@ buildscript {
         appcompat_version = "1.4.2"
         constraintlayout_version = "2.1.4"
         core_ktx_version = "1.8.0"
-        kotlin_version = "1.6.21"
+        kotlin_version = "1.7.0"
         material_version = "1.7.0-alpha02"
         nav_version = "2.4.2"
     }
