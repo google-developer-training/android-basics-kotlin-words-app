@@ -21,14 +21,14 @@ buildscript {
         core_ktx_version = "1.8.0"
         kotlin_version = "1.7.0"
         material_version = "1.7.0-alpha02"
-        nav_version = "2.4.2"
+        nav_version = "2.5.2"
     }
     repositories {
         google()
         mavenCentral()
     }
     dependencies {
-        classpath 'com.android.tools.build:gradle:7.2.1'
+        classpath 'com.android.tools.build:gradle:7.2.2'
         classpath "org.jetbrains.kotlin:kotlin-gradle-plugin:$kotlin_version"
         classpath "androidx.navigation:navigation-safe-args-gradle-plugin:$nav_version"
 
