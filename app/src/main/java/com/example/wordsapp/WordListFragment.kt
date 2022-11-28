@@ -62,7 +62,7 @@ class WordListFragment : Fragment() {
         savedInstanceState: Bundle?
     ): View? {
         // Retrieve and inflate the layout for this fragment
-        _binding = FragmentWordListBinding.inflate(inflater, container, false)
+        _binding = FragmentLetterListBinding.inflate(inflater, container, false)
         return binding.root
     }
 
