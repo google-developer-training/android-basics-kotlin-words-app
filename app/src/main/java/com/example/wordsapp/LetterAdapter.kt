@@ -15,6 +15,7 @@
  */
 package com.example.wordsapp
 
+import android.content.Intent
 import android.os.Build
 import android.view.LayoutInflater
 import android.view.View
@@ -72,6 +73,9 @@ class LetterAdapter :
             val action = LetterListFragmentDirections.actionLetterListFragmentToWordListFragment(letter = holder.button.text.toString())
             // Navigate using that action
             holder.view.findNavController().navigate(action)
+            // get a reference to the context
+            val context = holder.view.context
+            //Intent(context,DetailsActivity::class.java)
         }
     }
 
