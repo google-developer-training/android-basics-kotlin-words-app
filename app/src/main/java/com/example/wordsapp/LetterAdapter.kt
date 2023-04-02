@@ -56,13 +56,15 @@ class LetterAdapter :
         // Setup custom accessibility delegate to set the text read
         layout.accessibilityDelegate = Accessibility
         return LetterViewHolder(layout)
+        
     }
 
     /**
      * Replaces the content of an existing view with new data
      */
     override fun onBindViewHolder(holder: LetterViewHolder, position: Int) {
-        val item = list.get(position)
+        val item = list[position]
+
         holder.button.text = item.toString()
 
         // Assigns a [OnClickListener] to the button contained in the [ViewHolder]
@@ -83,7 +85,7 @@ class LetterAdapter :
             host: View,
             info: AccessibilityNodeInfo
         ) {
-            super.onInitializeAccessibilityNodeInfo(host, info)
+                    super.onInitializeAccessibilityNodeInfo(host, info)
             // With `null` as the second argument to [AccessibilityAction], the
             // accessibility service announces "double tap to activate".
             // If a custom string is provided,
