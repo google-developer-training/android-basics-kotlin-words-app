@@ -8,8 +8,8 @@
     <fragment
         android:id="@+id/letterListFragment"
         android:name="com.example.wordsapp.LetterListFragment"
-        android:label="fragment_letter_list"
-        tools:layout="@layout/fragment_letter_list" >
+        android:label="@string/app_name"
+        tools:layout="@layout/fragment_letter_list">
         <action
             android:id="@+id/action_letterListFragment_to_wordListFragment"
             app:destination="@id/wordListFragment" />
@@ -17,8 +17,8 @@
     <fragment
         android:id="@+id/wordListFragment"
         android:name="com.example.wordsapp.WordListFragment"
-        android:label="fragment_word_list"
-        tools:layout="@layout/fragment_word_list" >
+        android:label="@string/word_list_fragment_label"
+        tools:layout="@layout/fragment_word_list">
         <argument
             android:name="letter"
             app:argType="string" />
